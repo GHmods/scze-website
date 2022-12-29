@@ -1,6 +1,6 @@
 @font-face {
         font-family: "ZOMBIES NIGHT";
-        src: url('@{plChildRoot}/hlze/ZOMBIES NIGHT.ttf') format('truetype');
+        src: url('../scze-website/hlze/ZOMBIES NIGHT.ttf') format('truetype');
 }
 
 body {
