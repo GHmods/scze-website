@@ -1,6 +1,6 @@
 @font-face {
         font-family: "ZOMBIES NIGHT";
-        src: local("hlze/ZOMBIES NIGHT.ttf");
+        src: url('@{plChildRoot}/hlze/ZOMBIES NIGHT.ttf') format('truetype');
 }
 
 body {
