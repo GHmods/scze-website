@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+        <head>
+                <title>Sven Co-op:Zombie-Edition</title>
+                <meta charset="UTF-8">
+                <meta name="description" content="Sven Co-op:Zombie Edition">
+                <meta name="keywords" content="AngelScript, SC, Sven, Zombie-Edition, hlze, svencoop">
+                <meta name="author" content="Game Hunter">
+
+                <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+                <link rel="stylesheet" href="style.css">
+        </head>
+
+        <script src="script.js"></script>
+
+        <body>
+                <!-- Side Menu -->
+                <div id="side-menu" class="side-menu" style="--max-height:250px;">
+                        <a id="side-menu-button" class="side-menu-button" onclick="sandwitchButtonClick(this)">
+                                <div class="side-menu-b1"></div>
+                                <div class="side-menu-b2"></div>
+                                <div class="side-menu-b3"></div>
+                        </a>
+                        <div id="side-menu-elements" class="side-menu-elements">
+                                <button tabindex="-1" class="neon-button-selected" style="width:100%;--clr-neon:white;font-size: 200%;">
+                                        HOME
+                                </button>
+                                <form action="/downloads.html">
+                                        <button tabindex="-1" class="neon-button-no-reflection" style="width:100%;--clr-neon:green;font-size: 200%;">
+                                                DOWNLOADS
+                                        </button>
+                                </form>
+                                <form action="/about.html">
+                                        <button tabindex="-1" class="neon-button-no-reflection" style="width:100%;--clr-neon:yellow;font-size: 200%;">
+                                                ABOUT
+                                        </button>
+                                </form>
+                        </div>
+                </div>
+                <!-- Website is Created by...-->
+                <div class="created-by">
+                        <p class="neon-text" style="font-size: 120%;">
+                                This Website is created by:
+                                <a href="https://github.com/GHmods" style="pointer-events:all;text-decoration:none;color:yellow;" alt="Test">Game Hunter.</a>
+                        </p>
+                </div>
+                <div style="position:relative;padding-left:5%;text-align:center;">
+                        <!-- Title -->
+                        <div class="title">
+                                <img class="img-logo" src="../hlze/sc_logo.png" alt="Sven-Coop">
+                                <img class="img-banner" src="../hlze/scze_banner_big.png" alt="Sven-Coop:Zombie Edition">
+                                <img class="img-logo" src="../hlze/hlze_logo.png" alt="Half-Life:Zombie Edition">
+                        </div>
+                        <!-- About -->
+                        <div id="home-bar" style="padding-left:10%;font-weight:100;">
+                                <div tabindex="-1" class="neon-box" style="padding-left:15px;text-align:left;width:85%;border-style: none;--clr-neon:rgb(255, 255, 255);background-color: rgba(255, 255, 255, 0.25);">
+                                        <div style="text-align:center">
+                                                <a class="neon-text" style="font-size:50px;--clr-neon:white;text-align:center;">
+                                                        Half-Life: Zombie Edition
+                                                </a>
+                                        </div>
+                                        <div class="neon-text" style="font-size:20px;--clr-neon:white;font-family: 'Courier New', Courier, monospace;">
+                                                <a href="https://github.com/GHmods/scze" style="text-decoration:none;color:black;text-shadow:0 0 5px black;">Sven Co-op: Zombie-Edition</a>
+                                                is a port of the Zombie-Edition Mod for Half-Life.
+                                                <br>
+                                                Download the mod from
+                                                <a href="/downloads.html" style="text-decoration:none;color:green;text-shadow:0 0 5px green;">here</a>
+                                                or from the
+                                                <a onclick="sandwitchButtonClick()" style="cursor:pointer;;text-decoration:none;color:gray;text-shadow:0 0 5px gray;">menu</a>
+                                                in top left corner.
+                                                <br>
+                                                <br>
+                                                I'm doing everything from scratch, so some features from the original mod are missing.
+                                                I'm looking forward to implement them.
+                                                <br>
+                                                <br>
+                                                <a style="font-size:30px" class="neon-text">Small Gameplay Video:</a>
+                                                <div style="font-size:30px;float:right;padding-right:25px;">
+                                                        <a style="text-decoration:none;--clr-neon:white;">Version used in this video:</a>
+                                                        <a href="https://github.com/ghMods/scze/zipball/v0.3" class="neon-text" style="text-decoration:none;cursor:pointer;--clr-neon:green;">v0.3</a>
+                                                </div>
+                                                <iframe width="98%" height="500" src="https://www.youtube.com/embed/mcpfW0ufbQM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                                                <br>
+                                                <div style="font-size:25px;float:right;padding-right:25px;">
+                                                        <a style="text-decoration:none;cursor:pointer;--clr-neon:white;">Thanks to:</a>
+                                                        <a href="https://www.youtube.com/channel/UCzTZiL31g5pOmFuVSCwuynQ" style="text-decoration:none;cursor:pointer;color:rgb(0, 255, 0);text-shadow:0 0 5px rgb(0, 255, 0);">fErMangan tuU!!</a>
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <div style="font-size:30px;">
+                                                        More about the mod,
+                                                        <a href="/about.html" style="text-decoration:none;color:yellow;text-shadow:0 0 5px yellow;">Here</a>.
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </body>
+</html>

@@ -1,0 +1,437 @@
+@font-face {
+        font-family: "ZOMBIES NIGHT";
+        src: url("../hlze/ZOMBIES NIGHT.ttf");
+}
+
+body {
+        --background_color: black;
+        background-color: var(--background_color);
+        place-items: center;
+}
+
+.title {
+        width: 100%;
+        height: 15%;
+        position:relative;
+        text-align:center;
+        font-family: "ZOMBIES NIGHT";
+        font-size: 300%;
+        color:rgb(100, 100, 100);
+}
+
+.created-by {
+        pointer-events: none;
+        font-family: "ZOMBIES NIGHT";
+        z-index: 10;
+        text-align:center;
+        position:fixed;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        padding-top:41%;
+        height: 100%;
+}
+
+.img-banner {
+        position:relative;
+        width:500px;
+        animation: img-banner-effect;
+        animation-duration: 1s;
+        filter:blur(0) grayscale(1);
+}
+
+.img-logo {
+        width:150px;
+        filter:blur(0) grayscale(1);
+        animation: img-logo-effect 2s;
+}
+
+@keyframes img-logo-effect {
+        0%,30% {
+                opacity: 0%;
+                filter:blur(50px) grayscale(0);
+        }
+        100% {
+                filter:blur(0) grayscale(1);
+                opacity: 100%;
+        }
+}
+
+@keyframes img-banner-effect {
+        0% {
+                width:0px;
+                padding-left: 45%;
+                filter:blur(50px) grayscale(0);
+        }
+        5% {
+                filter:blur(0) grayscale(1);
+                filter:brightness(100%);
+        }
+        30% {
+                transform: rotateZ(20deg);
+                filter:brightness(25%);
+        }
+        40% {
+                filter:brightness(100%);
+        }
+        45% {
+                filter:brightness(500%);
+        }
+        100% {
+                filter:brightness(100%);
+        }
+}
+
+.neon-button-no-reflection,
+.all-versions-button,
+.neon-button {
+        transition: all 100ms;
+        scale:1.0;
+        background-color:rgb(45, 45, 45);
+        font-family: "ZOMBIES NIGHT";
+        --clr-neon:white;
+        color:var(--clr-neon);
+        font-size: 75px;
+        border: 5px solid var(--clr-neon);
+        border-radius: 15px;
+        cursor:default;
+        text-shadow: 0 0 5px var(--clr-neon);
+        box-shadow: inset 0 0 5px var(--clr-neon), 0 0 5px var(--clr-neon);
+}
+
+.neon-button-no-reflection {
+        background-color:transparent;
+}
+
+.neon-button-selected {
+        scale:1.0;
+        font-family: "ZOMBIES NIGHT";
+        --clr-neon:white;
+        font-size: 75px;
+        border: 5px solid var(--clr-neon);
+        border-radius: 15px;
+        cursor:default;
+        text-shadow: none;
+        box-shadow: inset 0 0 25px var(--clr-neon), 0 0 25px var(--clr-neon);
+        background-color: var(--clr-neon);
+        color: var(--background_color);
+        transition: all 100ms;
+}
+
+.neon-button::before {
+        transition: all 100ms;
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        background-color: var(--clr-neon);
+        border-radius: 25px;
+        left:0;
+        right:0;
+        top:150px;
+        bottom:-150px;
+        --perspective:0.7em;
+        transform: perspective(var(--perspective)) rotateX(25deg);
+        filter: blur(15px);
+        opacity: 50%;
+}
+
+.neon-button-no-reflection:hover,
+.all-versions-button:hover,
+.all-versions-button:focus,
+.neon-button:hover {
+        cursor:pointer;
+        text-shadow: none;
+        box-shadow: inset 0 0 25px var(--clr-neon), 0 0 25px var(--clr-neon);
+        background-color: var(--clr-neon);
+        color: var(--background_color);
+        transition: all 100ms;
+}
+
+.neon-button:hover::before {
+        opacity: 80%;
+        transition: all 100ms;
+}
+
+.all-versions-button:hover::before,
+.all-versions-button:focus::before {
+        opacity: 80%;
+        filter: blur(25px);
+        transition: all 100ms;
+}
+
+.all-versions-list,
+.neon-text {
+        font-family: "ZOMBIES NIGHT";
+        --clr-neon:white;
+        color:var(--clr-neon);
+        cursor:default;
+        text-shadow: 0 0 5px var(--clr-neon);
+}
+
+.neon-box {
+        transition: all 100ms;
+        position:relative;
+        text-align:center;
+        background-color:rgb(45, 45, 45);
+        font-family: "ZOMBIES NIGHT";
+        --clr-neon:white;
+        color:var(--clr-neon);
+        border: 5px solid var(--clr-neon);
+        border-radius: 15px;
+        cursor:default;
+        text-shadow: 0 0 5px var(--clr-neon);
+        box-shadow: inset 0 0 5px var(--clr-neon), 0 0 5px var(--clr-neon);
+}
+
+.neon-box::before {
+        transition: all 100ms;
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        background-color: var(--clr-neon);
+        border-radius: 25px;
+        left:0;
+        right:0;
+        top:500px;
+        bottom:-500px;
+        --perspective:1em;
+        transform: perspective(var(--perspective)) rotateX(25deg);
+        filter: blur(15em);
+        opacity: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+        width: 25px;
+}
+      
+/* Track */
+::-webkit-scrollbar-track {
+        background: rgb(45, 0, 0);
+}
+       
+/* Handle */
+::-webkit-scrollbar-thumb {
+        background: rgb(75, 0, 0);
+        content:"";
+        src:"../hlze/hlze_logo.png";
+}
+      
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+        background: rgb(105, 0, 0);
+}
+
+/* All Versions List*/
+.all-versions {
+        display:block;
+        position: relative;
+        text-align: left;
+}
+#all-versions {
+        height: 125px;
+        display: inline-block;
+        position: relative;
+        transform: translate(-25px, 0);
+        z-index: 1;
+}
+
+.all-versions-button::before {
+        transition: all 100ms;
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        background-color: var(--clr-neon);
+        border-radius: 25px;
+        left:0;
+        right:0;
+        top:150px;
+        bottom:-150px;
+        --perspective:2em;
+        transform: perspective(var(--perspective)) translateY(150%) rotateX(25deg);
+        filter: blur(15px);
+        opacity: 50%;
+}
+
+.all-versions-list {
+        border: 2px solid var(--clr-neon);
+        border-radius: 5px;
+        position:absolute;
+        z-index: 1;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        text-shadow: 0 0 5px var(--clr-neon);
+        box-shadow: inset 0 0 5px var(--clr-neon), 0 0 5px var(--clr-neon);
+        background:rgba(0,0,0,0.7);
+        margin-top:-5%;
+        display:none;
+        font-size: 125%;
+        text-align: center;
+}
+
+.all-versions-element {
+        transition: all 100ms;
+        scale:1.0;
+        background-color:transparent;
+        font-family: "ZOMBIES NIGHT";
+        --clr-neon:blue;
+        color:var(--clr-neon);
+        text-align: left;
+        box-shadow: inset 0 0 5px var(--clr-neon), 0 0 5px var(--clr-neon);
+        font-size: 25px;
+        border:none;
+        cursor:default;
+        text-shadow: 0 0 5px var(--clr-neon);
+        width: 100%;
+}
+
+.all-versions-element:hover{
+        background-color:var(--clr-neon);
+        color:var(--background_color);
+        border-color:var(--background_color);
+
+}
+
+.all-versions-button:focus + .all-versions-list
+{
+        display:block;
+        animation: all-versions-list-animation 500ms ease-in-out;
+}
+
+.all-versions-list:hover {
+        display:block;
+}
+
+@keyframes all-versions-list-animation {
+        0% {
+                transform: scale(1.0,0.0);
+                padding-bottom: 50%;
+                margin-top:-45.5%;
+                opacity: 0%;
+        }
+        50% {
+                padding-bottom: 10%;
+                padding-top: 60%;
+                opacity: 25%;
+        }
+        80% {
+                margin-top:-8%;
+                transform: scale(1.0,1.0);
+        }
+}
+
+/* Side Menu */
+.side-menu {
+        z-index: 9;
+        position:fixed;
+        display:block;
+        line-height: 50px;
+        transition:250ms;
+        --max-height:250px;
+        left:0;
+        right:0;
+        width:50px;
+        height:40px;
+        line-height:10px;
+        --clr-neon:rgba(100, 0, 0, 0.5);
+        border: 2px solid var(--clr-neon);
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        box-shadow: inset 0 0 5px var(--clr-neon), 0 0 5px var(--clr-neon);
+        background-color:var(--clr-neon);
+}
+
+.side-menu.open {
+        width:300px;
+        animation:side-menu-open 500ms forwards;
+}
+
+@keyframes side-menu-open {
+        60% {
+                height: 40px;
+        }
+        100% {
+                height: var(--max-height);
+        }
+}
+
+.side-menu-elements {
+        display:none;
+        opacity:0%;
+        transition:1s;
+        pointer-events: none;
+        line-height: 50px;
+}
+
+.side-menu-elements.show {
+        display:block;
+        animation:side-menu-elements-show 500ms forwards;
+}
+
+@keyframes side-menu-elements-show {
+        70% {
+                opacity:0%;
+        }
+        90% {
+                pointer-events:none;
+        }
+        100% {
+                opacity:100%;
+                pointer-events:all;
+        }
+}
+
+/* Menu Button */
+.side-menu-button {
+        position:relative;
+        cursor:pointer;
+        padding-right: 10px;
+}
+.side-menu-b1,
+.side-menu-b2,
+.side-menu-b3 {
+        width: 35px;
+        height: 5px;
+        background-color:black;
+        margin:6px 0;
+        transition: 500ms;
+}
+
+.change .side-menu-b1 {
+        transform: translate(0,11px) rotate(-45deg);
+}
+
+.change .side-menu-b2 {
+        opacity: 0%;
+}
+
+.change .side-menu-b3 {
+        transform: translate(0,-11px) rotate(45deg);
+}
+
+.credits-element-start {
+        border:5px solid green;
+        border-radius:5px;
+        border-bottom-left-radius:0;
+        border-bottom-right-radius:0;
+        border-bottom:0;
+        height:30px;
+        background-color: rgba(0, 0, 0, 0.25);
+}
+
+.credits-element {
+        border:5px solid green;
+        height:50px;
+        background-color: rgba(0, 0, 0, 0.25);
+}
+
+.credits-element-end {
+        border:5px solid green;
+        border-radius:5px;
+        border-top-left-radius:0;
+        border-top-right-radius:0;
+        border-top:0;
+        height:10px;
+        background-color: rgba(0, 0, 0, 0.25);
+}
