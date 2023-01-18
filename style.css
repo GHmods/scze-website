@@ -435,3 +435,113 @@ body {
         height:10px;
         background-color: rgba(0, 0, 0, 0.25);
 }
+
+/*
+        NEW RELEASE MESSAGE
+*/
+.new-release-container {
+        z-index: 8;
+        position:fixed;
+        display:inline-block;
+        align-items: center;
+        top:25px;
+        width:50%;
+        padding-left: 25%;
+}
+
+.release-text {
+        --t_delay:1000.0;
+        --t_freq:75.0;
+        
+        color:whitesmoke;
+        display:none;
+}
+
+.new-release {
+        opacity:0%;
+        width:25px;
+        transition:250ms;
+        min-width: 50px;
+        min-height:50px;
+        line-height:75px;
+        --clr-neon:rgba(0, 100, 0, 0.7);
+        border: 2px solid var(--clr-neon);
+        border-radius: 25px;
+        box-shadow: inset 0 0 5px var(--clr-neon), 0 0 5px var(--clr-neon);
+        background-color:var(--clr-neon);
+
+        color:white;
+        text-shadow: 0 0 5px gray;
+        font-family: "ZOMBIES NIGHT";
+        font-weight: bold;
+        text-align: center;
+
+        animation: new-release-show 2s forwards;
+}
+.x1,
+.x2 {
+        width: 35px;
+        height: 5px;
+        color:var(--background_color);
+        margin:6px 0;
+        transition: 500ms;
+        box-shadow: inset 0 0 5px var(--clr-neon), 0 0 5px var(--clr-neon);
+}
+
+.x1 {
+        transform: transform(0,11px) rotate(-45deg);
+}
+
+.x2 {
+        transform: transform(0,11px) rotate(45deg);
+}
+
+@keyframes new-release-show {
+        80% {
+                opacity:0%;
+                width:25px;
+                min-height: 50px;
+                padding-left:50%;
+                filter:blur(35px);
+        }
+        90% {
+                pointer-events:none;
+        }
+        100% {
+                opacity:100%;
+                width:100%;
+                min-height:100px;
+                pointer-events:all;
+        }
+}
+
+@keyframes element-show {
+        0% {
+                pointer-events:none;
+                opacity: 0%;
+                filter:blur(5px);
+        }
+        90% {
+                opacity: 0%;
+                pointer-events:none;
+        }
+        100% {
+                opacity:100%;
+                pointer-events:all;
+        }
+}
+@keyframes element-hide {
+        0% {
+                pointer-events:none;
+                opacity:100%;
+                width:100%;
+        }
+        50% {
+                transform: scale(0.7,0.25);
+        }
+        100% {
+                opacity:0%;
+                width:100%;
+                filter:blur(50px);
+        }
+}
